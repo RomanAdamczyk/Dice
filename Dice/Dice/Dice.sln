@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice", "Dice.csproj", "{B732187A-43EC-4507-8BF7-AF1938FEEAA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice.App", "..\Dice.App\Dice.App.csproj", "{13DA6922-38EE-403C-8466-279057FC9EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice.Domain", "..\Dice.Domain\Dice.Domain.csproj", "{D917CEAB-A63A-441E-9982-8D1E8BA44898}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B732187A-43EC-4507-8BF7-AF1938FEEAA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B732187A-43EC-4507-8BF7-AF1938FEEAA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B732187A-43EC-4507-8BF7-AF1938FEEAA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B732187A-43EC-4507-8BF7-AF1938FEEAA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13DA6922-38EE-403C-8466-279057FC9EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DA6922-38EE-403C-8466-279057FC9EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DA6922-38EE-403C-8466-279057FC9EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DA6922-38EE-403C-8466-279057FC9EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D537BBF4-31D6-439F-8C78-3400E76C0A63}
+	EndGlobalSection
+EndGlobal
