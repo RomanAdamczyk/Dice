@@ -1,4 +1,5 @@
-﻿using Dice.App.Common;
+﻿using Dice.App.Abstract;
+using Dice.App.Common;
 using Dice.Domain.Entity;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Dice.App.Concrete
 {
-    public class GameService: Program <Game>
+    public class GameService: IGameService<Program<Game>>
+    //public class GameService : Program<Game>
     {
         public List<Player> NewGame()
         {
@@ -143,38 +145,26 @@ namespace Dice.App.Concrete
             game.ValuesDices = new int[6];
             SetValuesDices(game);
             FindMax(game);
-            
-            if (player.FreeValues["Ones"]==false)
+            int schoolCount = 1;
+            foreach (string schoolNumber in player.Values.Keys)
             {
-                game.Values["Ones"] = CheckOnes(game);
+                if (schoolCount > 6)
+                {
+                    break;
+                }
+                if (player.FreeValues[schoolNumber] == false)
+                {
+                    game.Values[schoolNumber] = CheckSchool(game, schoolCount);
+                }
+                schoolCount++;
             }
-            if (player.FreeValues["Twos"] == false)
+            if (player.FreeValues["Triple"] == false)  // Tutaj nie tworzę pętli, bo dla dwóch elementów byłaby to sztuka dla sztuki
             {
-                game.Values["Twos"] = CheckTwos(game);
-            }
-            if (player.FreeValues["Threes"] == false)
-            {
-                game.Values["Threes"] = CheckThrees(game);
-            }
-            if (player.FreeValues["Fours"] == false)
-            {
-                game.Values["Fours"] = CheckFours(game);
-            }
-            if (player.FreeValues["Fives"] == false)
-            {
-                game.Values["Fives"] = CheckFives(game);
-            }
-            if (player.FreeValues["Sixs"] == false)
-            {
-                game.Values["Sixs"] = CheckSixs(game);
-            }
-            if (player.FreeValues["Triple"] == false)
-            {
-                game.Values["Triple"] = CheckTriple(game);
+                game.Values["Triple"] = CheckNumber(game,3);
             }
             if (player.FreeValues["Fourfold"] == false)
             {
-                game.Values["Fourfold"] = CheckFourfold(game);
+                game.Values["Fourfold"] = CheckNumber(game,4);
             }
             if (player.FreeValues["General"] == false)
             {
@@ -185,21 +175,17 @@ namespace Dice.App.Concrete
                 CheckGeneral(game, player);
                 
             }
-            if (player.FreeValues["Fourfold"] == false)
-            {
-                game.Values["Fourfold"] = CheckFourfold(game);
-            }
             if (player.FreeValues["Full"] == false)
             {
                 game.Values["Full"] = CheckFull(game);
             }
-            if (player.FreeValues["Small Straight"] == false)
+            if (player.FreeValues["SmallStraight"] == false)
             {
-                game.Values["Small Straight"] = CheckSmallStraight(game);
+                game.Values["SmallStraight"] = CheckStraight(game,4);
             }
-            if (player.FreeValues["High Straight"] == false)
+            if (player.FreeValues["HighStraight"] == false)
             {
-                game.Values["High Straight"] = CheckHighStraight(game);
+                game.Values["HighStraight"] = CheckStraight(game,5);
             }
             if (player.FreeValues["Chance"] == false)
             {
@@ -213,44 +199,13 @@ namespace Dice.App.Concrete
                 game.ValuesDices[game.Dices[i, 0] - 1]++;
             }
         }        
-        public int CheckOnes(Game game)
+        public int CheckSchool(Game game, int value)
         {
-            return game.ValuesDices[0];
+            return game.ValuesDices[value - 1] * value;
         }
-        public int CheckTwos(Game game)
+        public int CheckNumber(Game game, int value)
         {
-            return game.ValuesDices[1]*2;
-        }
-        public int CheckThrees(Game game)
-        {
-            return game.ValuesDices[2]*3;
-        }
-        public int CheckFours(Game game)
-        {
-            return game.ValuesDices[3]*4;
-        }
-        public int CheckFives(Game game)
-        {
-            return game.ValuesDices[4]*5;
-        }
-        public int CheckSixs(Game game)
-        {
-            return game.ValuesDices[5]*6;
-        }
-        public int CheckTriple(Game game)
-        {
-            if (game.Max >= 3)
-            {
-                return SumValues(game);
-            }
-            else
-            {
-                return 0;
-            }
-        }
-        public int CheckFourfold(Game game)
-        {
-            if (game.Max >= 4)
+            if (game.Max >= value)
             {
                 return SumValues(game);
             }
@@ -270,30 +225,25 @@ namespace Dice.App.Concrete
                 return 0;
             }
         }
-        public int CheckSmallStraight(Game game)
+        public int CheckStraight(Game game, int value)
         {
-            if ((game.ValuesDices[0] > 0 & game.ValuesDices[1] > 0 & game.ValuesDices[2] > 0 & game.ValuesDices[3] > 0) |
-                (game.ValuesDices[1] > 0 & game.ValuesDices[2] > 0 & game.ValuesDices[3] > 0 & game.ValuesDices[4] > 0) |
-                (game.ValuesDices[2] > 0 & game.ValuesDices[3] > 0 & game.ValuesDices[4] > 0 & game.ValuesDices[5] > 0))
+            int diceNumber = 1;
+            while (diceNumber + value <= 7)
             {
-                return 30;
+                for (int i = diceNumber - 1; i < diceNumber - 1 + value; i++)
+                {
+                    if (game.ValuesDices[i] == 0)
+                    {
+                        break;
+                    }
+                    if (i == diceNumber + value - 2)
+                    {
+                        return (value - 1) * 10;
+                    }
+                }
+                diceNumber++;
             }
-            else
-            {
-                return 0;
-            }
-        }
-        public int CheckHighStraight(Game game)
-        {
-            if ((game.ValuesDices[0] > 0 & game.ValuesDices[1] > 0 & game.ValuesDices[2] > 0 & game.ValuesDices[3] > 0 & game.ValuesDices[4] > 0) |
-                (game.ValuesDices[1] > 0 & game.ValuesDices[2] > 0 & game.ValuesDices[3] > 0 & game.ValuesDices[4] > 0 & game.ValuesDices[5] > 0))
-              {
-                return 40;
-            }
-            else
-            {
-                return 0;
-            }
+            return 0;
         }
         public int CheckGeneral(Game game)
         {
@@ -319,7 +269,7 @@ namespace Dice.App.Concrete
                 {
                     game.Values["HighStraight"] = 40;
                 }
-                if (game.Values["General"] > 0)
+                if (player.Values["General"] > 0)
                 {
                     player.Values["General"] += 100;
                 }
@@ -354,7 +304,7 @@ namespace Dice.App.Concrete
                 {
                     player.Values["Bonus"] = 35;                 
                 }
-                player.Values["Total"] = player.Values["Ones"] + player.Values["Twos"] + player.Values["Threes"] + player.Values["Fours"] + player.Values["Fives"] + player.Values["Sixs"] + player.Values["Bonus"] + player.Values["Triple"] + player.Values["Fourfold"] + player.Values["Full"] + player.Values["Small Straight"] + player.Values["High Straight"] + player.Values["General"] + player.Values["Chance"];
+                player.Values["Total"] = player.Values["Ones"] + player.Values["Twos"] + player.Values["Threes"] + player.Values["Fours"] + player.Values["Fives"] + player.Values["Sixs"] + player.Values["Bonus"] + player.Values["Triple"] + player.Values["Fourfold"] + player.Values["Full"] + player.Values["SmallStraight"] + player.Values["HighStraight"] + player.Values["General"] + player.Values["Chance"];
             }
         }
         public void DiceLeave (Game game, int count)

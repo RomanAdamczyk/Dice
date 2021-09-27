@@ -1,0 +1,15 @@
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\Dice.App.deps.json
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\Dice.App.dll
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\ref\Dice.App.dll
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\Dice.App.pdb
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\Dice.Domain.dll
+D:\KursDotNet\Dice\Dice.App\bin\Debug\net5.0\Dice.Domain.pdb
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.csproj.AssemblyReference.cache
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.GeneratedMSBuildEditorConfig.editorconfig
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.AssemblyInfoInputs.cache
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.AssemblyInfo.cs
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.csproj.CoreCompileInputs.cache
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.csproj.CopyComplete
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.dll
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\ref\Dice.App.dll
+D:\KursDotNet\Dice\Dice.App\obj\Debug\net5.0\Dice.App.pdb

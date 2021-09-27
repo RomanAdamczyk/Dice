@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Dice.App/1.0.0": {
+        "dependencies": {
+          "Dice.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Dice.App.dll": {}
+        }
+      },
+      "Dice.Domain/1.0.0": {
+        "runtime": {
+          "Dice.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dice.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Dice.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

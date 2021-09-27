@@ -28,8 +28,8 @@ namespace Dice.Domain.Entity
             FreeValues.Add("Triple", false);
             FreeValues.Add("Fourfold", false);
             FreeValues.Add("Full", false);
-            FreeValues.Add("Small Straight", false);
-            FreeValues.Add("High Straight", false);
+            FreeValues.Add("SmallStraight", false);
+            FreeValues.Add("HighStraight", false);
             FreeValues.Add("General", false);
             FreeValues.Add("Chance", false);
             FreeValues.Add("Total", true);
@@ -45,8 +45,8 @@ namespace Dice.Domain.Entity
             Values.Add("Triple", 0);
             Values.Add("Fourfold", 0);
             Values.Add("Full", 0);
-            Values.Add("Small Straight", 0);
-            Values.Add("High Straight", 0);
+            Values.Add("SmallStraight", 0);
+            Values.Add("HighStraight", 0);
             Values.Add("General", 0);
             Values.Add("Chance", 0);
             Values.Add("Total", 0);

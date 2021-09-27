@@ -1,0 +1,12 @@
+D:\KursDotNet\Dice\Dice.Domain\bin\Debug\net5.0\Dice.Domain.deps.json
+D:\KursDotNet\Dice\Dice.Domain\bin\Debug\net5.0\Dice.Domain.dll
+D:\KursDotNet\Dice\Dice.Domain\bin\Debug\net5.0\ref\Dice.Domain.dll
+D:\KursDotNet\Dice\Dice.Domain\bin\Debug\net5.0\Dice.Domain.pdb
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.csproj.AssemblyReference.cache
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.AssemblyInfoInputs.cache
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.AssemblyInfo.cs
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.csproj.CoreCompileInputs.cache
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.dll
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\ref\Dice.Domain.dll
+D:\KursDotNet\Dice\Dice.Domain\obj\Debug\net5.0\Dice.Domain.pdb

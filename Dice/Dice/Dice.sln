@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice", "Dice.csproj", "{B732187A-43EC-4507-8BF7-AF1938FEEAA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice.App", "..\Dice.App\Dice.App.csproj", "{13DA6922-38EE-403C-8466-279057FC9EE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice.App", "..\Dice.App\Dice.App.csproj", "{13DA6922-38EE-403C-8466-279057FC9EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice.Domain", "..\Dice.Domain\Dice.Domain.csproj", "{D917CEAB-A63A-441E-9982-8D1E8BA44898}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dice.Domain", "..\Dice.Domain\Dice.Domain.csproj", "{D917CEAB-A63A-441E-9982-8D1E8BA44898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dice.Tests", "..\Dice.Tests\Dice.Tests.csproj", "{D37887F1-9895-46D0-B3CD-16EC1CEB3689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D917CEAB-A63A-441E-9982-8D1E8BA44898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D37887F1-9895-46D0-B3CD-16EC1CEB3689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D37887F1-9895-46D0-B3CD-16EC1CEB3689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D37887F1-9895-46D0-B3CD-16EC1CEB3689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D37887F1-9895-46D0-B3CD-16EC1CEB3689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
